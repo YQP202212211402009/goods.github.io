@@ -51,6 +51,23 @@
             align-items: center; /* 垂直居中 */
             justify-content: center; /* 水平居中 */
         }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .product img {
+                height: 80px; /* 调整手机端图片高度 */
+            }
+
+            .product .name, .product .description, .product .price {
+                flex-basis: 100%; /* 在手机端垂直堆叠元素 */
+                justify-content: flex-start; /* 对齐到开始位置 */
+                padding: 5px 0; /* 调整内边距 */
+            }
+
+            .product {
+                flex-direction: column; /* 在手机端垂直堆叠产品 */
+            }
+        }
     </style>
 </head>
 <body>
